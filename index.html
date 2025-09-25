@@ -1,141 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Dong - Freelance Software Developer Portfolio</title>
+    <title>Jack Dong - Full Stack Software Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5', // Indigo for accents
+                        secondary: '#1F2937', // Dark gray for text
+                        accent: '#10B981', // Green for highlights
+                        bgLight: '#F9FAFB', // Light background
+                        bgDark: '#111827', // Dark background for sections
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
-
-<body class="bg-gray-50 text-gray-800 antialiased">
-    <!-- Header/Hero Section -->
-    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-2">Jack Dong</h1>
-            <p class="text-xl md:text-2xl mb-4">Freelance Software Developer | Backend & Full-Stack Specialist</p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
-                <p>(778) 388-9371</p>
-                <p>jackdong1@outlook.com</p>
-                <a href="https://linkedin.com/in/jackdong2" target="_blank" rel="noopener noreferrer"
-                    class="text-blue-200 hover:text-white">linkedin.com/in/jackdong2</a>
-                <p>Vancouver BC, Canada</p>
+<body class="bg-bgLight font-sans text-secondary antialiased">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="https://raw.githubusercontent.com/jackdong1/portfolio/refs/heads/main/logo-1.png" alt="Logo" width="40" height="40" class="rounded-full" />
+                <span class="text-2xl font-bold text-secondary">Jack Dong</span>
             </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#hero" class="hover:text-primary transition">Home</a></li>
+                <li><a href="#about" class="hover:text-primary transition">About</a></li>
+                <li><a href="#projects" class="hover:text-primary transition">Portfolio</a></li>
+                <li><a href="#skills" class="hover:text-primary transition">Expertise</a></li>
+                <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+            </ul>
+            <button id="menu-toggle" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+            <ul class="flex flex-col space-y-4 px-4 py-4">
+                <li><a href="#hero" class="hover:text-primary transition">Home</a></li>
+                <li><a href="#about" class="hover:text-primary transition">About</a></li>
+                <li><a href="#projects" class="hover:text-primary transition">Projects</a></li>
+                <li><a href="#skills" class="hover:text-primary transition">Skills</a></li>
+                <li><a href="#contact" class="hover:text-primary transition">Contact</a></li>
+            </ul>
         </div>
     </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-white">
+    <!-- Hero Section -->
+    <section id="hero" class="bg-bgDark text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Full Stack Software Developer</h1>
+            <p class="text-xl mb-8">Specializing in full-stack development, scalable backend architecture, cloud infrastructure, and AI-driven web applications.</p>
+            <a href="#projects" class="bg-primary text-white px-6 py-3 rounded-md hover:bg-accent transition">View Portfolio</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold mb-8 text-center">Project Portfolio</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-lg mb-6">I'm Jack Dong, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture, cloud infrastructure, and leveraging AI for web applications. I've worked on high-performance backend systems and frontend applications for high-traffic games and video streaming platforms, focusing on performance optimization and efficient deployments.</p>
+                <p class="text-lg">Located in Vancouver, BC, Canada. Passionate about creating innovative, robust solutions that enhance user experiences and drive business efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-bgLight py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Project Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <!-- Project 1 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">Backend Automation for Video Post-Processing and Scalability
-                    </h3>
-                    <p class="text-gray-600 mb-4">Company: airG (Video Streaming Service – <a
-                            href="https://watchpfl.com" target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">watchpfl.com</a>, <a href="https://quickclipstv.com"
-                            target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">quickclipstv.com</a>)</p>
-                    <p class="mb-2"><strong>Overview:</strong> Led the automation of video post-processing workflows for
-                        a streaming service, involving processing source files from cloud storage and uploading to AWS
-                        S3.</p>
-                    <p class="mb-2"><strong>Technologies:</strong> Python, Node.js, AWS (Beanstalk, EC2, S3), MongoDB,
-                        Redis.</p>
-                    <p class="mb-2"><strong>Challenges:</strong> The existing backend system struggled with high latency
-                        for uploading and processing video and image files with high server loads during peak usage.</p>
-                    <p class="mb-2"><strong>Solutions:</strong> Implemented auto-scaling and caching strategies to
-                        distribute workloads efficiently, using Redis and Beanstalk to off load the video and assets for
-                        post-processing. Implemented messaging to provide progress status updates.</p>
-                    <p class="mb-2"><strong>Outcomes:</strong> Improved video delivery speed for users, enabling
-                        real-time content updates. Resulted in optimizing system performance and significantly reducing
-                        response time, directly contributing to better user experience.</p>
-                    <p><strong>Details:</strong> Showcases automation in backend processes for media-heavy applications.
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Game and Video Content Management Platform</h3>
+                    <p class="mb-4"><strong>Company:</strong> airG (Multiple Platforms – 
+                        <a href="https://kittysnatch.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">kittysnatch.com</a>, 
+                        <a href="https://unlimitedgamez.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">unlimitedgamez.com</a>, 
+                        <a href="https://watchpfl.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">watchpfl.com</a>, 
+                        <a href="https://quickclipstv.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">quickclipstv.com</a>)
                     </p>
-                </div>
-
+                    <p class="mb-2"><strong>Overview:</strong> Architected and developed scalable backend systems and user-centeric frontend applications for games and video streaming platforms, supporting over 1 million users.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Node.js, Python, MongoDB, MySQL, Redis, AWS, React.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> Create a full-stack content management system (CMS) with features enabling seamless content uploads, management, and delivery that integrated with existing systems.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Developed the backend with Node.js/Python and MongoDB/MySQL for data management; the frontend using React for a responsive UI/UX; and deployed using Jenkins/Gitlab CI/CD pipeline to AWS.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Improved system performance and enabled seamless content management for global users. Showcase end-to-end solution that reduced content update time, enhanced user experience and scalability while ensuring robust security.</p>
+                </div>                
                 <!-- Project 2 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">Automated CI/CD Pipeline for Video Streaming Platform</h3>
-                    <p class="text-gray-600 mb-4">Company: airG (Video Streaming Service – <a
-                            href="https://watchpfl.com" target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">watchpfl.com</a>, <a href="https://quickclipstv.com"
-                            target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">quickclipstv.com</a>)</p>
-                    <p class="mb-2"><strong>Overview:</strong> Designed and implemented a CI/CD pipeline to streamline
-                        deployment of a high-traffic video streaming platform serving over 1 million users.</p>
-                    <p class="mb-2"><strong>Technologies:</strong> Docker, Jenkins, GitLab, AWS (EC2, S3, CloudFront),
-                        Node.js, Python.</p>
-                    <p class="mb-2"><strong>Challenges:</strong> Manual deployments caused delays and introduced errors,
-                        impacting release cycles.</p>
-                    <p class="mb-2"><strong>Solutions:</strong> Automated the deployment process using Jenkins for
-                        continuous integration, Docker for containerization, and GitLab for version control, with AWS
-                        for scalable hosting. Configured automated testing and rollback mechanisms.</p>
-                    <p class="mb-2"><strong>Outcomes:</strong> Reduced deployment time by 40% and improved system
-                        reliability, enabling faster feature rollouts and workflow.</p>
-                    <p><strong>Details:</strong> Showcases automated process that streamlines the software development
-                        lifecycle, ensuring zero-downtime deployments.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Backend Automation for Video Processing and Scalability</h3>
+                    <p class="mb-4"><strong>Company:</strong> airG (Video Streaming Service – 
+                        <a href="https://watchpfl.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">watchpfl.com</a>, 
+                        <a href="https://quickclipstv.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">quickclipstv.com</a>)
+                    </p>
+                    <p class="mb-2"><strong>Overview:</strong> Led the automation of video post-processing workflows for a streaming service, involving processing source files from cloud storage and uploading to AWS S3.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Node.js, AWS (Beanstalk, EC2, S3), MongoDB, Redis.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> The existing backend system struggled with high latency for uploading and processing video and image files with high server loads during peak usage.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Implemented auto-scaling and caching strategies to distribute workloads efficiently, using Redis and Beanstalk to off load the video and assets for post-processing. Implemented messaging to provide progress status updates.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Improved video delivery speed for users, enabling real-time content updates. Resulted in optimizing system performance and significantly reducing response time, directly contributing to better user experience. Showcases automation in backend processes for media-heavy applications.</p>
                 </div>
-
                 <!-- Project 3 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">Scalable Backend for Game and Video Content Management</h3>
-                    <p class="text-gray-600 mb-4">Company: airG (Multiple Platforms – <a href="https://kittysnatch.com"
-                            target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">kittysnatch.com</a>, <a
-                            href="https://unlimitedgamez.com" target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">unlimitedgamez.com</a>, <a href="https://watchpfl.com"
-                            target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">watchpfl.com</a>, <a href="https://quickclipstv.com"
-                            target="_blank" rel="noopener noreferrer"
-                            class="text-blue-600 hover:underline">quickclipstv.com</a>)</p>
-                    <p class="mb-2"><strong>Overview:</strong> Architected and developed microservices-based backend
-                        systems for games and video streaming platforms, supporting over 1 million users.</p>
-                    <p class="mb-2"><strong>Technologies:</strong> Node.js, Python, MongoDB, MySQL, Redis, AWS, React.
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-2">Automated CI/CD Pipeline for Game and Video Streaming Platform</h3>
+                    <p class="mb-4"><strong>Company:</strong> airG (Multiple Platforms – 
+                        <a href="https://kittysnatch.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">kittysnatch.com</a>, 
+                        <a href="https://unlimitedgamez.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">unlimitedgamez.com</a>, 
+                        <a href="https://watchpfl.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">watchpfl.com</a>, 
+                        <a href="https://quickclipstv.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">quickclipstv.com</a>)
                     </p>
-                    <p class="mb-2"><strong>Challenges:</strong> High user traffic caused performance bottlenecks in
-                        data retrieval and processing.</p>
-                    <p class="mb-2"><strong>Solutions:</strong> Designed microservices for API server, user
-                        authentication, notifications, and payments, with optimized MongoDB/MySQL queries and Redis
-                        caching. Built a React-based content management system (CMS) for frontend teams.</p>
-                    <p class="mb-2"><strong>Outcomes:</strong> Improved system performance by 30% and enabled seamless
-                        content management for global users.</p>
-                    <p><strong>Details:</strong> Showcase end-to-end solution that reduced content update time, enhanced
-                        user experience and scalability while ensuring robust security.</p>
+                    <p class="mb-2"><strong>Overview:</strong> Designed and implemented a CI/CD pipeline to streamline deployment of a high-traffic video streaming platform serving over 1 million users.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Docker, Jenkins, GitLab, AWS (EC2, S3, CloudFront), Node.js, Python.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> Manual deployments caused delays and introduced errors, impacting release cycles.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Automated the deployment process using Jenkins for continuous integration, Docker for containerization, and GitLab for version control, with AWS for scalable hosting. Configured automated testing and rollback mechanisms.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Reduced deployment time by 40% and improved system reliability, enabling faster feature rollouts and workflow. Showcases automated process that streamlines the software development lifecycle, ensuring zero-downtime deployments.</p>
                 </div>
-
                 <!-- Project 4 -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <h3 class="text-2xl font-semibold mb-2">AI-Driven Code Generation and Prompt Tuning for Web
-                        Applications</h3>
-                    <p class="text-gray-600 mb-4">Company: Outlier (AI training platform)</p>
-                    <p class="mb-2"><strong>Overview:</strong> Trained generative AI models via prompt engineering to
-                        auto-generate full-stack web apps, focusing on automation of code evaluation and optimization.
-                        This involved tuning prompts for React/Next.js outputs to ensure clean, maintainable codebases.
-                    </p>
-                    <p class="mb-2"><strong>Technologies:</strong> Next.js, React, TypeScript, JavaScript, AI prompt
-                        engineering.</p>
-                    <p class="mb-2"><strong>Challenges:</strong> AI-generated code often lacked quality of similar
-                        fortune 500 grade web application.</p>
-                    <p class="mb-2"><strong>Solutions:</strong> Developed evaluation strategies to refine outputs for
-                        functionality and UI/UX to produce high-quality, fortune 500 grade web application.</p>
-                    <p class="mb-2"><strong>Outcomes:</strong> Produced production-ready apps, ensuring high
-                        functionality, UI/UX quality, and maintainable codebases.</p>
-                    <p><strong>Details:</strong> Illustrates modern automation through AI, ideal for innovative app
-                        development where efficiency is key.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold mb-2">AI-Driven Code Generation and Prompt Tuning for Web Applications</h3>
+                    <p class="mb-4"><strong>Company:</strong> Outlier (AI training platform)</p>
+                    <p class="mb-2"><strong>Overview:</strong> Trained generative AI models via prompt engineering to auto-generate full-stack web apps, focusing on automation of code evaluation and optimization. This involved tuning prompts for React/Next.js outputs to ensure clean, maintainable codebases.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Next.js, React, TypeScript, JavaScript, AI prompt engineering.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> AI-generated code often lacked quality to similar fortune 500 grade web application.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Developed evaluation strategies to refine outputs for functionality and UI/UX to produce high-quality, fortune 500 grade web application.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Produced production-ready apps, ensuring high functionality, UI/UX quality, and maintainable codebases. Illustrates modern automation through AI, ideal for innovative app development where efficiency is key.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 text-center">
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-bgDark text-white">
         <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Technical Expertise</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">Python</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">Node.js</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">React</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">Next.js</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">TypeScript</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">JavaScript</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">AWS</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">MongoDB</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">SQL</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">Redis</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">CI/CD</div>
+                <div class="bg-bgLight text-secondary p-4 rounded-lg text-center shadow">AI Development</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+            <div class="text-lg w-fit mx-auto text-left mb-8">
+                <p class="mb-2"><a href="https://maps.app.goo.gl/vAT5XHcetKngk2yK6" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary"><i class="fa-solid fa-location-dot text-2xl"></i> Vancouver, BC, Canada</a></p>
+                <p class="mb-2"><a href="mailto:jackdong1@outlook.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary"><i class="fa-solid fa-envelope text-2xl"></i> jackdong1@outlook.com</a></p>
+                <p class="mb-2"><a href="https://linkedin.com/in/jackdong2" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-primary"><i class="fa-brands fa-square-linkedin text-2xl"></i> LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-bgDark text-white py-6">
+        <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 Jack Dong. All rights reserved.</p>
-            <p class="mt-2">Contact: jackdong1@outlook.com | (778) 388-9371</p>
         </div>
     </footer>
-</body>
 
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
 </html>
