@@ -1,25 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
-      display: block;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Dong - Freelance Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <iframe src="portfolio.pdf" title="My Portfolio"></iframe>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+    <!-- Header/Hero Section -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-2">Jack Dong</h1>
+            <p class="text-xl md:text-2xl mb-4">Freelance Software Developer | Backend & Full-Stack Specialist</p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
+                <p>(778) 388-9371</p>
+                <p>jackdong1@outlook.com</p>
+                <a href="https://linkedin.com/in/jackdong2" target="_blank" rel="noopener noreferrer"
+                    class="text-blue-200 hover:text-white">linkedin.com/in/jackdong2</a>
+                <p>Vancouver BC, Canada</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">Project Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-2">Backend Automation for Video Post-Processing and Scalability
+                    </h3>
+                    <p class="text-gray-600 mb-4">Company: airG (Video Streaming Service – <a
+                            href="https://watchpfl.com" target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">watchpfl.com</a>, <a href="https://quickclipstv.com"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">quickclipstv.com</a>)</p>
+                    <p class="mb-2"><strong>Overview:</strong> Led the automation of video post-processing workflows for
+                        a streaming service, involving processing source files from cloud storage and uploading to AWS
+                        S3.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Python, Node.js, AWS (Beanstalk, EC2, S3), MongoDB,
+                        Redis.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> The existing backend system struggled with high latency
+                        for uploading and processing video and image files with high server loads during peak usage.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Implemented auto-scaling and caching strategies to
+                        distribute workloads efficiently, using Redis and Beanstalk to off load the video and assets for
+                        post-processing. Implemented messaging to provide progress status updates.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Improved video delivery speed for users, enabling
+                        real-time content updates. Resulted in optimizing system performance and significantly reducing
+                        response time, directly contributing to better user experience.</p>
+                    <p><strong>Details:</strong> Showcases automation in backend processes for media-heavy applications.
+                    </p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-2">Automated CI/CD Pipeline for Video Streaming Platform</h3>
+                    <p class="text-gray-600 mb-4">Company: airG (Video Streaming Service – <a
+                            href="https://watchpfl.com" target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">watchpfl.com</a>, <a href="https://quickclipstv.com"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">quickclipstv.com</a>)</p>
+                    <p class="mb-2"><strong>Overview:</strong> Designed and implemented a CI/CD pipeline to streamline
+                        deployment of a high-traffic video streaming platform serving over 1 million users.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Docker, Jenkins, GitLab, AWS (EC2, S3, CloudFront),
+                        Node.js, Python.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> Manual deployments caused delays and introduced errors,
+                        impacting release cycles.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Automated the deployment process using Jenkins for
+                        continuous integration, Docker for containerization, and GitLab for version control, with AWS
+                        for scalable hosting. Configured automated testing and rollback mechanisms.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Reduced deployment time by 40% and improved system
+                        reliability, enabling faster feature rollouts and workflow.</p>
+                    <p><strong>Details:</strong> Showcases automated process that streamlines the software development
+                        lifecycle, ensuring zero-downtime deployments.</p>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-2">Scalable Backend for Game and Video Content Management</h3>
+                    <p class="text-gray-600 mb-4">Company: airG (Multiple Platforms – <a href="https://kittysnatch.com"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">kittysnatch.com</a>, <a
+                            href="https://unlimitedgamez.com" target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">unlimitedgamez.com</a>, <a href="https://watchpfl.com"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">watchpfl.com</a>, <a href="https://quickclipstv.com"
+                            target="_blank" rel="noopener noreferrer"
+                            class="text-blue-600 hover:underline">quickclipstv.com</a>)</p>
+                    <p class="mb-2"><strong>Overview:</strong> Architected and developed microservices-based backend
+                        systems for games and video streaming platforms, supporting over 1 million users.</p>
+                    <p class="mb-2"><strong>Technologies:</strong> Node.js, Python, MongoDB, MySQL, Redis, AWS, React.
+                    </p>
+                    <p class="mb-2"><strong>Challenges:</strong> High user traffic caused performance bottlenecks in
+                        data retrieval and processing.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Designed microservices for API server, user
+                        authentication, notifications, and payments, with optimized MongoDB/MySQL queries and Redis
+                        caching. Built a React-based content management system (CMS) for frontend teams.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Improved system performance by 30% and enabled seamless
+                        content management for global users.</p>
+                    <p><strong>Details:</strong> Showcase end-to-end solution that reduced content update time, enhanced
+                        user experience and scalability while ensuring robust security.</p>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-semibold mb-2">AI-Driven Code Generation and Prompt Tuning for Web
+                        Applications</h3>
+                    <p class="text-gray-600 mb-4">Company: Outlier (AI training platform)</p>
+                    <p class="mb-2"><strong>Overview:</strong> Trained generative AI models via prompt engineering to
+                        auto-generate full-stack web apps, focusing on automation of code evaluation and optimization.
+                        This involved tuning prompts for React/Next.js outputs to ensure clean, maintainable codebases.
+                    </p>
+                    <p class="mb-2"><strong>Technologies:</strong> Next.js, React, TypeScript, JavaScript, AI prompt
+                        engineering.</p>
+                    <p class="mb-2"><strong>Challenges:</strong> AI-generated code often lacked quality of similar
+                        fortune 500 grade web application.</p>
+                    <p class="mb-2"><strong>Solutions:</strong> Developed evaluation strategies to refine outputs for
+                        functionality and UI/UX to produce high-quality, fortune 500 grade web application.</p>
+                    <p class="mb-2"><strong>Outcomes:</strong> Produced production-ready apps, ensuring high
+                        functionality, UI/UX quality, and maintainable codebases.</p>
+                    <p><strong>Details:</strong> Illustrates modern automation through AI, ideal for innovative app
+                        development where efficiency is key.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Jack Dong. All rights reserved.</p>
+            <p class="mt-2">Contact: jackdong1@outlook.com | (778) 388-9371</p>
+        </div>
+    </footer>
 </body>
+
 </html>
