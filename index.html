@@ -5,49 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jack Dong - Full Stack Software Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#4F46E5', // Indigo for accents
-                        secondary: '#1F2937', // Dark gray for text
-                        accent: '#10B981', // Green for highlights
-                        bgLight: '#F9FAFB', // Light background
-                        bgDark: '#111827', // Dark background for sections
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                },
-            },
-        };
-    </script>
-    <style>
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        .animate-fade-in-scale {
-            animation: fadeInScale 2s ease-in-out forwards;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="tailwind.config.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jackdong1/portfolio/refs/heads/main/logo-1.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo-1.png">
 </head>
 <body class="bg-bgLight font-sans text-secondary antialiased">
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <img src="https://raw.githubusercontent.com/jackdong1/portfolio/refs/heads/main/logo-1.png" alt="Logo" class="size-10 rounded-full" />
+                <img src="images/logo-1.png" alt="Logo" class="size-10 rounded-full" />
                 <span class="text-2xl font-bold text-secondary">Jack Dong</span>
             </div>
             <ul class="hidden md:flex space-x-6">
@@ -90,7 +60,7 @@
             <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
             <div class="flex flex-col md:flex-row justify-center items-center gap-8">
                 <div>
-                    <img src="https://raw.githubusercontent.com/jackdong1/portfolio/refs/heads/main/hero-1.jpg" alt="Hero" class="size-80 rounded-full mx-auto shadow-lg animate-fade-in-scale" />
+                    <img src="images/hero-1.jpg" alt="Hero" class="size-80 rounded-full mx-auto shadow-lg animate-fade-in-scale" />
                 </div>
                 <div class="md:w-1/2 text-left bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
                     <p class="text-lg mb-6">I'm Jack Dong, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture, cloud infrastructure, and leveraging AI for web applications to deliver innovative, robust solutions that enhance user experiences and drive business efficiency.</p>
@@ -204,26 +174,5 @@
             <p>&copy; 2025 Jack Dong. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
 </body>
 </html>
