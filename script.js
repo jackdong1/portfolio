@@ -16,3 +16,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         mobileMenu.classList.add('hidden');
     });
 });
+
+
+// Project Filtering 
+function filterProjects(category) {
+    const projects = document.querySelectorAll('#project-grid article');
+    const buttons = document.querySelectorAll('[role="toolbar"] button');
+    buttons.forEach(btn => btn.setAttribute('aria-pressed', btn.textContent === category ? 'true' : 'false'));
+    projects.forEach(project => {
+        project.style.display = category === 'all' || project.dataset.category === category ? 'block' : 'none';
+    });
+}
