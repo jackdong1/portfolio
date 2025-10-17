@@ -79,13 +79,14 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
         <div className="flex items-center gap-2">
           <Image 
-            src="/images/logo-1.png" 
+            src={`${basePath}/images/logo-1.png`}
             alt="Jack Dong's logo" 
             width={40} 
             height={40} 

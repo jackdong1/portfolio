@@ -2,7 +2,7 @@
 
 https://jackdong1.github.io/portfolio/
 
-Deploy
+Build and Deploy to Github pages
 ```bash
 npm run deploy
 ```

@@ -45,6 +45,8 @@ function HeroSection() {
 }
 
 function AboutSection() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  
   return (
     <section id="about" className="py-16">
       <div className="container mx-auto px-4">
@@ -52,7 +54,7 @@ function AboutSection() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div>
             <Image 
-              src="/images/hero-1.jpg" 
+              src={`${basePath}/images/hero-1.jpg`}
               alt="Jack Dong, Software Engineer" 
               width={320} 
               height={320} 
