@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { BASE_PATH } from '@/lib/config';
 
 export function MobileMenuButton({ onClick }: { onClick: () => void }) {
   return (
-    <button 
+    <button
       onClick={onClick}
-      className="md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" 
+      className="md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
       aria-label="Toggle mobile menu"
     >
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -28,8 +29,8 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
     <div className="md:hidden bg-white shadow-md" role="region" aria-label="Mobile navigation">
       <ul className="flex flex-col space-y-4 px-4 py-4">
         <li>
-          <a 
-            href="#hero" 
+          <a
+            href="#hero"
             onClick={handleLinkClick}
             className="block hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-primary"
           >
@@ -37,8 +38,8 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
           </a>
         </li>
         <li>
-          <a 
-            href="#about" 
+          <a
+            href="#about"
             onClick={handleLinkClick}
             className="block hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-primary"
           >
@@ -46,8 +47,8 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
           </a>
         </li>
         <li>
-          <a 
-            href="#projects" 
+          <a
+            href="#projects"
             onClick={handleLinkClick}
             className="block hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-primary"
           >
@@ -55,8 +56,8 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
           </a>
         </li>
         <li>
-          <a 
-            href="#skills" 
+          <a
+            href="#skills"
             onClick={handleLinkClick}
             className="block hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-primary"
           >
@@ -64,8 +65,8 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
           </a>
         </li>
         <li>
-          <a 
-            href="#contact" 
+          <a
+            href="#contact"
             onClick={handleLinkClick}
             className="block hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-primary"
           >
@@ -79,18 +80,17 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
+  
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
         <div className="flex items-center gap-2">
-          <Image 
-            src={`${basePath}/images/logo-1.png`}
-            alt="Jack Dong's logo" 
-            width={40} 
-            height={40} 
-            className="rounded-full" 
+          <Image
+            src={`${BASE_PATH}/images/logo-1.png`}
+            alt="Jack Dong's logo"
+            width={40}
+            height={40}
+            className="rounded-full"
           />
           <span className="text-2xl font-bold text-secondary">Jack Dong</span>
         </div>
