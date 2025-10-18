@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Header } from './components/MobileMenu';
-import { BASE_PATH } from '@/lib/config';
+import { BASE_PATH, SITE_URL, CONTACT_EMAIL, LINKEDIN_URL, LOCATION_URL, LOCATION } from '@/lib/config';
 
 export default function Home() {
   return (
@@ -34,8 +34,8 @@ function HeroSection() {
         <p className="text-xl mb-8">
           Specializing in full-stack development, scalable backend architecture, cloud infrastructure, and AI-driven web applications.
         </p>
-        <a
-          href="#projects"
+        <a 
+          href="#projects" 
           className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-700 transition focus:outline-none focus:ring-2 focus:ring-indigo-700"
         >
           View Portfolio
@@ -52,21 +52,21 @@ function AboutSection() {
         <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div>
-            <Image
+            <Image 
               src={`${BASE_PATH}/images/hero-1.jpg`}
-              alt="Jack Dong, Software Engineer"
-              width={320}
-              height={320}
+              alt="Jack Dong, Software Engineer" 
+              width={320} 
+              height={320} 
               className="rounded-full mx-auto shadow-lg animate-fade-in-scale"
             />
           </div>
           <div className="md:w-1/2 text-left bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <p className="text-lg mb-6">
-              I&apos;m Jack Dong, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture,
-              cloud infrastructure, and leveraging AI for web applications to deliver innovative, robust solutions that enhance user
+              I&apos;m Jack Dong, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture, 
+              cloud infrastructure, and leveraging AI for web applications to deliver innovative, robust solutions that enhance user 
               experiences and drive business efficiency.
             </p>
-            <p className="text-lg">Located in Vancouver, British Columbia, Canada.</p>
+            <p className="text-lg">Located in {LOCATION}.</p>
           </div>
         </div>
       </div>
@@ -201,28 +201,28 @@ function ContactSection() {
         <h2 className="text-3xl font-bold text-center mb-8">Get in Touch</h2>
         <div className="text-lg w-fit mx-auto text-left mb-8">
           <p className="mb-2">
-            <a
-              href="https://maps.app.goo.gl/vAT5XHcetKngk2yK6"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href={LOCATION_URL}
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="text-gray-700 hover:text-indigo-600"
             >
-              <i className="fa-solid fa-location-dot text-2xl" aria-hidden="true"></i> Vancouver, British Columbia, Canada
+              <i className="fa-solid fa-location-dot text-2xl" aria-hidden="true"></i> {LOCATION}
             </a>
           </p>
           <p className="mb-2">
-            <a
-              href="mailto:jackdong1@outlook.com"
+            <a 
+              href={`mailto:${CONTACT_EMAIL}`}
               className="text-gray-700 hover:text-indigo-600"
             >
-              <i className="fa-solid fa-envelope text-2xl" aria-hidden="true"></i> jackdong1@outlook.com
+              <i className="fa-solid fa-envelope text-2xl" aria-hidden="true"></i> {CONTACT_EMAIL}
             </a>
           </p>
           <p className="mb-2">
-            <a
-              href="https://linkedin.com/in/jackdong2"
-              target="_blank"
-              rel="noopener noreferrer"
+            <a 
+              href={LINKEDIN_URL}
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="text-gray-700 hover:text-indigo-600"
             >
               <i className="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i> LinkedIn

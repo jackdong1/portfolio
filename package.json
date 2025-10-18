@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "NODE_ENV=production next build && touch out/.nojekyll && gh-pages -d out -t"
+    "deploy": "cross-env NODE_ENV=production next build && touch out/.nojekyll && gh-pages -d out -t"
   },
   "dependencies": {
     "next": "15.5.6",
@@ -20,6 +20,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.6",
     "gh-pages": "^6.3.0",
