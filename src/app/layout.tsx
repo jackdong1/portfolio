@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import { SITE_URL } from "@/lib/config";
 import "./globals.css";
 
@@ -37,10 +36,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
-        <Script 
-          src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js" 
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   );

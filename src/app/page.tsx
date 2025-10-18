@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaLocationDot, FaLinkedin } from "react-icons/fa6";
+import { MdEmail } from "react-icons/md";
 import { Header } from './components/MobileMenu';
-import { BASE_PATH, SITE_URL, CONTACT_EMAIL, LINKEDIN_URL, LOCATION_URL, LOCATION } from '@/lib/config';
+import { BASE_PATH, CONTACT_EMAIL, LINKEDIN_URL, LOCATION_URL, LOCATION } from '@/lib/config';
 
 export default function Home() {
   return (
@@ -159,10 +162,10 @@ function ProjectCard({ project }: { project: Project }) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex justify-center items-center gap-2 bg-indigo-50 text-indigo-600 px-3 py-2 rounded-md hover:bg-indigo-100 transition-colors font-medium"
+                className="flex flex-wrap justify-center items-center gap-2 bg-indigo-50 text-indigo-600 px-3 py-2 rounded-md hover:bg-indigo-100 transition-colors font-medium"
               >
                 {link.name}
-                <i className="fas fa-external-link-alt" aria-hidden="true"></i>
+                <FaExternalLinkAlt className="flex-shrink-0" aria-hidden="true" />
               </a>
             ))}
           </div>
@@ -205,17 +208,17 @@ function ContactSection() {
               href={LOCATION_URL}
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-700 hover:text-indigo-600"
+              className="flex justify-left items-center gap-2 text-gray-700 hover:text-indigo-600"
             >
-              <i className="fa-solid fa-location-dot text-2xl" aria-hidden="true"></i> {LOCATION}
+              <FaLocationDot className="text-2xl" aria-hidden="true"/> {LOCATION}
             </a>
           </p>
           <p className="mb-2">
             <a 
               href={`mailto:${CONTACT_EMAIL}`}
-              className="text-gray-700 hover:text-indigo-600"
+              className="flex justify-left items-center gap-2 text-gray-700 hover:text-indigo-600"
             >
-              <i className="fa-solid fa-envelope text-2xl" aria-hidden="true"></i> {CONTACT_EMAIL}
+              <MdEmail className="text-2xl" aria-hidden="true"/> {CONTACT_EMAIL}
             </a>
           </p>
           <p className="mb-2">
@@ -223,9 +226,9 @@ function ContactSection() {
               href={LINKEDIN_URL}
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-gray-700 hover:text-indigo-600"
+              className="flex justify-left items-center gap-2 text-gray-700 hover:text-indigo-600"
             >
-              <i className="fa-brands fa-linkedin text-2xl" aria-hidden="true"></i> LinkedIn
+              <FaLinkedin className="text-2xl" aria-hidden="true"/> LinkedIn
             </a>
           </p>
         </div>
