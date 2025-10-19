@@ -154,7 +154,7 @@ function ProjectCard({ project }: { project: Project }) {
       <p className="mb-4"><strong>Outcomes:</strong> {project.outcomes}</p>
       {project.links && (
         <>
-          <p className="mb-4"><strong>Explore the Live Platform:</strong></p>
+          <p className="mb-4"><strong>Explore the Live Sites:</strong></p>
           <div className="grid grid-cols-2 gap-2 text-center">
             {project.links.map((link, index) => (
               <a
@@ -164,8 +164,7 @@ function ProjectCard({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 className="flex flex-wrap justify-center items-center gap-2 bg-indigo-50 text-indigo-600 px-3 py-2 rounded-md hover:bg-indigo-100 transition-colors font-medium"
               >
-                {link.name}
-                <FaExternalLinkAlt className="flex-shrink-0" aria-hidden="true" />
+                <div>{link.name} <FaExternalLinkAlt className="inline align-middle -translate-y-0.5 text-xs" aria-hidden="true" /></div>
               </a>
             ))}
           </div>
