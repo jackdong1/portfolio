@@ -1,4 +1,7 @@
+"use client"
+
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaLocationDot, FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
@@ -49,24 +52,54 @@ function HeroSection() {
 }
 
 function AboutSection() {
+  const [isVisible, setIsVisible] = useState(false);
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    // On desktop, animation runs on load, so no need for IntersectionObserver
+    // On mobile, use IntersectionObserver to trigger animation on scroll
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing once visible
+        }
+      },
+      { threshold: 0.3 } // Trigger when 10% of the image is visible
+    );
+
+    if (imageRef.current) {
+      observer.observe(imageRef.current);
+    }
+
+    return () => {
+      if (imageRef.current) {
+        observer.unobserve(imageRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id="about" className="py-16">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
           <div>
-            <Image 
+            <Image
+              ref={imageRef}
               src={`${BASE_PATH}/images/hero-1.jpg`}
-              alt="Jack Dong, Software Engineer" 
-              width={320} 
-              height={320} 
-              className="rounded-full mx-auto shadow-lg animate-fade-in-scale"
+              alt="Jack Dong, Software Engineer"
+              width={320}
+              height={320}
+              className={`rounded-full mx-auto shadow-lg ${
+                isVisible ? 'md:animate-slide-in-left animate-slide-in-left' : 'opacity-0'
+              }`}
             />
           </div>
           <div className="md:w-1/2 text-left bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <p className="text-lg mb-6">
-              I&apos;m Jack Dong, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture, 
-              cloud infrastructure, and leveraging AI for web applications to deliver innovative, robust solutions that enhance user 
+              I&apos;m Jack Dong, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture,
+              cloud infrastructure, and leveraging AI for web applications to deliver innovative, robust solutions that enhance user
               experiences and drive business efficiency.
             </p>
             <p className="text-lg">Located in {LOCATION}.</p>
