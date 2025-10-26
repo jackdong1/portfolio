@@ -58,7 +58,7 @@ function AboutSection() {
   useEffect(() => {
     const currentImage = imageRef.current;
 
-    // Trigger on scroll when 10% of the image is visible
+    // Trigger on scroll when 30% of the image is visible
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -66,7 +66,7 @@ function AboutSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
 
     if (currentImage) {
