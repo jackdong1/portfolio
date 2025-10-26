@@ -56,18 +56,17 @@ function AboutSection() {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    // Capture imageRef.current at the time the effect runs
     const currentImage = imageRef.current;
 
-    // On desktop, animation runs on load; on mobile, trigger on scroll
+    // Trigger on scroll when 10% of the image is visible
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Stop observing once visible
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 } // Trigger when 10% of the image is visible
+      { threshold: 0.1 }
     );
 
     if (currentImage) {
@@ -76,10 +75,10 @@ function AboutSection() {
 
     return () => {
       if (currentImage) {
-        observer.unobserve(currentImage); // Use captured reference in cleanup
+        observer.unobserve(currentImage);
       }
     };
-  }, []); // Empty dependency array is fine since we're capturing the ref
+  }, []);
 
   return (
     <section id="about" className="py-16">
