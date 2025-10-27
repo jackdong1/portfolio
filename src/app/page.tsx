@@ -215,7 +215,7 @@ function ProjectCard({ project }: { project: Project }) {
                 rel="noopener noreferrer"
                 className="flex flex-wrap justify-center items-center gap-2 bg-indigo-50 text-primary px-3 py-2.5 rounded-lg hover:bg-indigo-100 smooth-hover font-medium hover:scale-105 shadow-sm"
               >
-                <div>{link.name} <FaExternalLinkAlt className="inline align-middle -translate-y-0.5 text-xs" aria-hidden="true" /></div>
+                <div className="text-center">{link.name} <FaExternalLinkAlt className="inline align-middle -translate-y-0.5 text-xs" aria-hidden="true" /></div>
               </a>
             ))}
           </div>
