@@ -111,15 +111,11 @@ function AboutSection() {
           </div>
           <div className="md:w-1/2 text-left">
             <div className="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl smooth-hover border border-gray-200">
-              <p className="text-lg mb-6 leading-relaxed text-gray-700">
+              <p className="text-lg leading-relaxed text-gray-700">
                 I&apos;m <span className="font-semibold text-gradient-primary">Jack Dong</span>, a Software Engineer with 10+ years of experience in full-stack development, scalable backend architecture,
                 cloud infrastructure, and leveraging AI for web applications to deliver innovative, robust solutions that enhance user
                 experiences and drive business efficiency.
               </p>
-              <div className="flex items-center gap-2 text-gray-600">
-                <FaLocationDot className="text-primary" />
-                <p className="text-lg">Located in <span className="font-medium">{LOCATION}</span>.</p>
-              </div>
             </div>
           </div>
         </div>
@@ -217,7 +213,7 @@ function ProjectCard({ project }: { project: Project }) {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-wrap justify-center items-center gap-2 bg-gradient-to-r from-indigo-50 to-purple-50 text-primary px-3 py-2.5 rounded-lg hover:from-indigo-100 hover:to-purple-100 smooth-hover font-medium hover:scale-105 shadow-sm"
+                className="flex flex-wrap justify-center items-center gap-2 bg-indigo-50 text-primary px-3 py-2.5 rounded-lg hover:bg-indigo-100 smooth-hover font-medium hover:scale-105 shadow-sm"
               >
                 <div>{link.name} <FaExternalLinkAlt className="inline align-middle -translate-y-0.5 text-xs" aria-hidden="true" /></div>
               </a>
