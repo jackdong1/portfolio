@@ -198,7 +198,7 @@ function ProjectCard({ project }: { project: Project }) {
       <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-primary smooth-hover">
         {project.title}
       </h3>
-      <p className="mb-4 text-sm font-semibold text-primary"><strong>Company:</strong> {project.company}</p>
+      <p className="mb-4 text-sm font-semibold text-primary"> {project.company}</p>
       <p className="mb-2 text-gray-700"><strong>Overview:</strong> {project.overview}</p>
       <p className="mb-2 text-gray-700"><strong>Technologies:</strong> {project.technologies}</p>
       <p className="mb-2 text-gray-700"><strong>Solutions:</strong> {project.solutions}</p>
@@ -228,7 +228,7 @@ function ProjectCard({ project }: { project: Project }) {
 function SkillsSection() {
   const skills = [
     "Python", "Node.js", "React", "Next.js", "TypeScript", "JavaScript",
-    "AWS", "MongoDB", "SQL", "Redis", "CI/CD", "AI"
+    "AWS", "MongoDB", "SQL", "Redis", "CI/CD", "AI Coding"
   ];
 
   return (
