@@ -149,7 +149,7 @@ function ProjectsSection() {
       outcomes: "Cut video delivery time by 40% and server load by 25%, enhancing real-time content updates.",
     },
     {
-      title: "Automated CI/CD Pipeline for Game and Video Streaming Platform",
+      title: "Automated CI/CD Pipeline and Workflow",
       company: "airG (Global Gaming and Video Platform)",
       overview: "Designed a CI/CD pipeline for a high-traffic gaming and video streaming platform serving 1M+ users.",
       technologies: "Docker, Jenkins, GitLab, AWS (EC2, S3, CloudFront), Node.js, Python.",
