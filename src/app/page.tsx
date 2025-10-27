@@ -157,7 +157,7 @@ function ProjectsSection() {
       outcomes: "Reduced deployment time by 40% and achieved zero-downtime releases, enabling faster feature rollouts.",
     },
     {
-      title: "AI-Driven Code Generation for Web Applications",
+      title: "AI-Driven Development for Web Applications",
       company: "Outlier (AI Training Platform)",
       overview: "Trained generative AI models via prompt engineering to auto-generate production-ready full-stack web apps with clean React/Next.js codebases.",
       technologies: "Next.js, React, TypeScript, JavaScript, AI Prompt Engineering (Grok and Claude-based models).",
@@ -228,7 +228,7 @@ function ProjectCard({ project }: { project: Project }) {
 function SkillsSection() {
   const skills = [
     "Python", "Node.js", "React", "Next.js", "TypeScript", "JavaScript",
-    "AWS", "MongoDB", "SQL", "Redis", "CI/CD", "AI Development"
+    "AWS", "MongoDB", "SQL", "Redis", "CI/CD", "AI"
   ];
 
   return (
@@ -246,7 +246,7 @@ function SkillsSection() {
           {skills.map((skill, index) => (
             <div 
               key={index} 
-              className="bg-white/10 backdrop-blur-sm text-white p-6 rounded-xl text-center shadow-lg hover:shadow-2xl hover:bg-white/20 smooth-hover hover:scale-105 border border-white/20 font-semibold"
+              className="flex flex-wrap justify-center items-center bg-white/10 backdrop-blur-sm text-white p-6 rounded-xl text-center shadow-lg hover:shadow-2xl hover:bg-white/20 smooth-hover hover:scale-105 border border-white/20 font-semibold"
             >
               {skill}
             </div>
