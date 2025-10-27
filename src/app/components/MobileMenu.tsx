@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { BASE_PATH } from '@/lib/config';
+import Link from 'next/link';
 
 export function MobileMenuButton({ onClick }: { onClick: () => void }) {
   return (
@@ -84,7 +85,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-200">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
-        <a href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple to-pink rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
             <Image
@@ -98,7 +99,7 @@ export function Header() {
           <span className="text-2xl font-bold text-gradient-primary hover:opacity-80 smooth-hover">
             Jack Dong
           </span>
-        </a>
+        </Link>
         <ul className="hidden md:flex space-x-8">
           <li>
             <a 
