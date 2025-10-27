@@ -4,12 +4,18 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Portfolio Custom Colors */
-  --primary: #4f46e5;
-  --secondary: #1f2937;
-  --accent: #10b981;
-  --bg-light: #f9fafb;
-  --bg-dark: #111827;
+  /* Portfolio Custom Colors - matching the polished design */
+  --primary: #4f46e5; /* indigo-600 */
+  --primary-hover: #4338ca; /* indigo-700 */
+  --purple: #9333ea; /* purple-600 */
+  --purple-hover: #7e22ce; /* purple-700 */
+  --pink: #ec4899; /* pink-600 */
+  --secondary: #1f2937; /* gray-800 */
+  --bg-light: #f9fafb; /* gray-50 */
+  --bg-gray: #f3f4f6; /* gray-100 */
+  --bg-dark: #111827; /* gray-900 */
+  --bg-dark-alt: #312e81; /* indigo-900 */
+  --bg-purple-dark: #581c87; /* purple-900 */
 }
 
 @theme inline {
@@ -18,10 +24,16 @@
 
   /* Portfolio Custom Colors */
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-purple: var(--purple);
+  --color-purple-hover: var(--purple-hover);
+  --color-pink: var(--pink);
   --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
   --color-bgLight: var(--bg-light);
+  --color-bgGray: var(--bg-gray);
   --color-bgDark: var(--bg-dark);
+  --color-bgDarkAlt: var(--bg-dark-alt);
+  --color-bgPurpleDark: var(--bg-purple-dark);
 
   /* Font Family - Using Inter from layout.tsx */
   --font-sans: var(--font-inter), 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -69,11 +81,55 @@ body {
     }
   }
 
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
   .animate-fade-in-scale {
     animation: fadeInScale 0.5s ease-out forwards;
   }
 
   .animate-slide-in-left {
     animation: slideInLeft 0.5s ease-out forwards;
+  }
+
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Custom gradient text utilities */
+@layer utilities {
+  .text-gradient-primary {
+    background: linear-gradient(to right, var(--primary), var(--purple), var(--pink));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-hero {
+    background: linear-gradient(to right, #ffffff, #c7d2fe, #e9d5ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Smooth hover transitions */
+@layer components {
+  .smooth-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Custom backdrop blur for better browser support */
+@supports (backdrop-filter: blur(12px)) {
+  .backdrop-blur-md {
+    backdrop-filter: blur(12px);
   }
 }
