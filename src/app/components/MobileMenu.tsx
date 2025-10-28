@@ -87,7 +87,7 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center" aria-label="Main navigation">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary via-purple to-pink rounded-full blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple to-primary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
             <Image
               src={`${BASE_PATH}/images/logo-1.png`}
               alt="Jack Dong's logo"
