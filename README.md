@@ -1,7 +1,16 @@
 # Portfolio
+Full Stack Software Developer Portfolio
+
+Visit the site - https://jackdong1.github.io/portfolio/
+
+## Development
+```bash
+# Build Local development
+npm install
+```
 
 ```bash
-# Local development - http://localhost:3000
+# Run Local development - http://localhost:3000
 npm run dev
 ```
 
