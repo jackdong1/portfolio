@@ -136,6 +136,8 @@ function ProjectsSection() {
       links: [
         { name: "KittySnatch", url: "https://kittysnatch.com" },
         { name: "Unlimited Gamez", url: "https://unlimitedgamez.com" },
+        { name: "PFL", url: "https://watchpfl.com" },
+        { name: "QuickClips", url: "https://quickclipstv.com" },
       ],
     },
     {
@@ -145,10 +147,6 @@ function ProjectsSection() {
       technologies: "Node.js, AWS (EC2, S3), Beanstalk, MongoDB, Redis.",
       solutions: "Implemented microservices, auto-scaling, and caching with Redis and Beanstalk to reduce latency in video uploads during peak usage and real-time progress updates.",
       outcomes: "Cut video delivery time by 40% and server load by 25%, enhancing real-time content updates.",
-      links: [
-        { name: "PFL", url: "https://watchpfl.com" },
-        { name: "QuickClips", url: "https://quickclipstv.com" },
-      ],
     },
     {
       title: "Automated CI/CD Pipeline and Workflow",
