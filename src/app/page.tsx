@@ -10,7 +10,7 @@ import { BASE_PATH, CONTACT_EMAIL, LINKEDIN_URL, LOCATION_URL, LOCATION } from '
 
 export default function Home() {
   return (
-    <div className="bg-bgLight font-sans text-gray-800 antialiased">
+    <div className="bg-bgLight text-gray-800 antialiased">
       {/* Skip Link */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:bg-white focus:px-4 focus:py-2 focus:text-primary focus:z-50">
         Skip to main content
@@ -43,7 +43,7 @@ function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient-hero">
+        <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6 text-gradient-hero">
           Full Stack Software Developer
         </h1>
         <p className="text-xl md:text-2xl mb-10 text-gray-200 max-w-3xl mx-auto leading-relaxed">
@@ -92,7 +92,7 @@ function AboutSection() {
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-12">
           About Me
         </h2>
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 max-w-5xl mx-auto">
@@ -169,7 +169,7 @@ function ProjectsSection() {
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-12">
           Project Portfolio
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -239,7 +239,7 @@ function SkillsSection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient-hero">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-12 text-gradient-hero">
           Technical Expertise
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -261,7 +261,7 @@ function ContactSection() {
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-center mb-12">
           Get in Touch
         </h2>
         <div className="max-w-2xl mx-auto">
@@ -285,7 +285,7 @@ function ContactSection() {
               <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-3 rounded-full group-hover:scale-110 smooth-hover">
                 <MdEmail className="text-2xl text-primary" aria-hidden="true"/>
               </div>
-              <span className="text-lg font-medium">{CONTACT_EMAIL}</span>
+              <span className="text-lg font-medium break-all">{CONTACT_EMAIL}</span>
             </a>
             
             <a 

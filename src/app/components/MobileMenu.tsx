@@ -96,7 +96,7 @@ export function Header() {
               className="relative rounded-full"
             />
           </div>
-          <span className="text-2xl font-bold text-gradient-primary hover:opacity-80 smooth-hover">
+          <span className="text-2xl font-heading font-bold text-gradient-primary hover:opacity-80 smooth-hover">
             Jack Dong
           </span>
         </Link>
