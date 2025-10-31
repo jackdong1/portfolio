@@ -28,7 +28,7 @@ export function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () =
 
   return (
     <div className="md:hidden bg-bgGray border-t border-gray-200 shadow-lg" role="region" aria-label="Mobile navigation">
-      <ul className="flex flex-col space-y-2 px-4 py-4">
+      <ul className="flex flex-col space-y-2 p-4">
         <li>
           <a
             href="#hero"

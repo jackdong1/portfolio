@@ -265,12 +265,12 @@ function ContactSection() {
           Get in Touch
         </h2>
         <div className="max-w-2xl mx-auto">
-          <div className="flex flex-col items-start bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl smooth-hover border border-gray-200">
+          <div className="flex flex-col items-start gap-6 bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl smooth-hover border border-gray-200">
             <a 
               href={LOCATION_URL}
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-4 text-gray-700 hover:text-primary smooth-hover group p-4 rounded-lg"
+              className="flex items-center gap-4 text-gray-700 hover:text-primary smooth-hover group rounded-lg"
             >
               <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-3 rounded-full group-hover:scale-110 smooth-hover">
                 <FaLocationDot className="text-2xl text-primary" aria-hidden="true"/>
@@ -280,7 +280,7 @@ function ContactSection() {
             
             <a 
               href={`mailto:${CONTACT_EMAIL}`}
-              className="flex items-center gap-4 text-gray-700 hover:text-primary smooth-hover group p-4 rounded-lg"
+              className="flex items-center gap-4 text-gray-700 hover:text-primary smooth-hover group rounded-lg"
             >
               <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-3 rounded-full group-hover:scale-110 smooth-hover">
                 <MdEmail className="text-2xl text-primary" aria-hidden="true"/>
@@ -292,7 +292,7 @@ function ContactSection() {
               href={LINKEDIN_URL}
               target="_blank" 
               rel="noopener noreferrer" 
-              className="flex items-center gap-4 text-gray-700 hover:text-primary smooth-hover group p-4 rounded-lg"
+              className="flex items-center gap-4 text-gray-700 hover:text-primary smooth-hover group rounded-lg"
             >
               <div className="bg-gradient-to-br from-indigo-100 to-purple-100 p-3 rounded-full group-hover:scale-110 smooth-hover">
                 <FaLinkedin className="text-2xl text-primary" aria-hidden="true"/>
