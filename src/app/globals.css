@@ -6,7 +6,7 @@
 
   /* Portfolio Custom Colors */
   --primary: #4f46e5;         /* indigo-600 */
---primary-hover: #4338ca;     /* indigo-700 */
+  --primary-hover: #4338ca;   /* indigo-700 */
   --purple: #9333ea;          /* purple-600 */
   --purple-hover: #7e22ce;    /* purple-700 */
   --pink: #ec4899;            /* pink-600 */
